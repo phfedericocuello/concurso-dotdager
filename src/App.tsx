@@ -1,7 +1,8 @@
 import React from 'react';
-import { Guitar, Cat, BookOpen, Sandwich } from 'lucide-react';
+import { Guitar, Cat, BookOpen, Bean } from 'lucide-react';
 import Header from './components/Header';
 import PassionCard from './components/PassionCard';
+import AnimatedSubtitle from './components/AnimatedSubtitle';
 
 function App() {
   return (
@@ -17,13 +18,14 @@ function App() {
         <div className="relative container mx-auto px-4 flex flex-col lg:flex-row items-center gap-12">
           <div className="flex-1 text-center lg:text-left">
             <h1 className="text-6xl font-bold leading-tight text-white mb-4">
-              Dot <span className="text-emerald-400">Dagger</span>
+              Dot <span className="text-emerald-400">Dager</span>
             </h1>
-            <div className="text-xl text-emerald-400 font-medium mb-6">
-              Full Stack Developer & Serial Bad Joke Teller
-            </div>
+            <AnimatedSubtitle 
+              text="Full Stack Developer & Contador serial de chistes malos"
+              className="text-xl text-emerald-400 font-medium mb-6 h-8"
+            />
             <p className="text-xl text-zinc-400">
-              Where code meets comedy, and every bug comes with a punchline
+              Donde el codigo y la comedia se encuentran, a menos que tengas una duda...
             </p>
           </div>
           
@@ -31,7 +33,7 @@ function App() {
             <div className="relative">
               <div className="w-64 h-64 lg:w-80 lg:h-80 rounded-full overflow-hidden border-4 border-emerald-400">
                 <img 
-                  src="https://images.unsplash.com/photo-1568602471122-7832951cc4c5?auto=format&fit=crop&q=80"
+                  src="https://yt3.googleusercontent.com/KPVok_m-JqxKG5wD7HaXc5RyYDPPHHZpQP4KquV8fD9er0mGEkZ_9UuQojBehXz6aCxUt0RI=s900-c-k-c0x00ffffff-no-rj"
                   alt="Dot Dagger"
                   className="w-full h-full object-cover"
                 />
@@ -70,7 +72,7 @@ function App() {
             <PassionCard
               title="Pickles"
               description="Turning cucumbers into time capsules of flavor."
-              Icon={Sandwich}
+              Icon={Bean}
               color="bg-yellow-400"
             />
           </div>
