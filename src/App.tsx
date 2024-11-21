@@ -29,9 +29,9 @@ function App() {
             </p>
           </div>
           
-          <div className="flex-1 flex justify-center lg:justify-end">
+          <div className="flex-1 flex justify-center ">
             <div className="relative">
-              <div className="w-64 h-64 lg:w-80 lg:h-80 rounded-full overflow-hidden border-4 border-emerald-400">
+              <div className="w-80 h-80 lg:w-96 lg:h-96 rounded-full overflow-hidden border-4 border-emerald-400">
                 <img 
                   src="https://yt3.googleusercontent.com/KPVok_m-JqxKG5wD7HaXc5RyYDPPHHZpQP4KquV8fD9er0mGEkZ_9UuQojBehXz6aCxUt0RI=s900-c-k-c0x00ffffff-no-rj"
                   alt="Dot Dagger"
@@ -39,7 +39,7 @@ function App() {
                 />
               </div>
               <div className="absolute -bottom-4 -right-4 bg-zinc-800 px-6 py-2 rounded-full border border-emerald-400">
-                <span className="text-emerald-400 font-bold">sudo make me laugh</span>
+                <span className="text-emerald-400 font-bold">Sudomasoquista</span>
               </div>
             </div>
           </div>
@@ -49,28 +49,28 @@ function App() {
       {/* Passions Section */}
       <section id="passions" className="py-20 bg-zinc-800">
         <div className="container mx-auto px-4">
-          <h2 className="text-4xl font-bold text-center mb-16 text-white">My Passions</h2>
+          <h2 className="text-4xl font-bold text-center mb-16 text-white">Mis pasiones</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             <PassionCard
-              title="Guitar"
+              title="Guitarra"
               description="Making strings vibrate and eardrums question their life choices."
               Icon={Guitar}
               color="bg-emerald-400"
             />
             <PassionCard
-              title="Cats"
+              title="Gatos"
               description="Professional cat herder and expert in feline negotiations."
               Icon={Cat}
               color="bg-pink-400"
             />
             <PassionCard
-              title="Philosophy"
+              title="Filosofia"
               description="Asking 'why' until everyone leaves the room."
               Icon={BookOpen}
               color="bg-purple-400"
             />
             <PassionCard
-              title="Pickles"
+              title="Pepinos"
               description="Turning cucumbers into time capsules of flavor."
               Icon={Bean}
               color="bg-yellow-400"
@@ -82,7 +82,7 @@ function App() {
       {/* Content Section */}
       <section id="content" className="py-20 bg-zinc-900">
         <div className="container mx-auto px-4">
-          <h2 className="text-4xl font-bold text-center mb-16 text-white">Latest Content</h2>
+          <h2 className="text-4xl font-bold text-center mb-16 text-white">Contenido reciente</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {/* Featured Video Card */}
             <div className="bg-zinc-800 rounded-xl shadow-lg overflow-hidden border border-zinc-700">
@@ -130,14 +130,14 @@ function App() {
       <section id="about" className="py-20 bg-zinc-800">
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto text-center">
-            <h2 className="text-4xl font-bold mb-8 text-white">About Dot Dagger</h2>
+            <h2 className="text-4xl font-bold mb-8 text-white">Sobre Dot Dagger</h2>
             <p className="text-xl text-zinc-400 leading-relaxed mb-8">
               When I'm not crafting beautiful code or debugging with a smile, I'm probably telling dad jokes to my cats 
               while strumming power chords. I believe in the philosophy that life is better with a soundtrack and a 
               side of pickles. Warning: My code may contain traces of humor.
             </p>
             <button className="bg-emerald-500 hover:bg-emerald-600 text-zinc-900 font-bold py-3 px-8 rounded-full transition-colors">
-              Subscribe for Bad Jokes
+              Subscribite
             </button>
           </div>
         </div>
@@ -146,7 +146,7 @@ function App() {
       {/* Footer */}
       <footer className="bg-zinc-900 text-zinc-400 py-8 border-t border-zinc-800">
         <div className="container mx-auto px-4 text-center">
-          <p>© {new Date().getFullYear()} Dot Dagger. All rights reserved. No jokes were harmed in the making of this website.</p>
+          <p>© {new Date().getFullYear()} Dot Dagger. Todos los derechos reservados. Ningun pepino fue herido durante la creacion de esta web.</p>
         </div>
       </footer>
     </div>
