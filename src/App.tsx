@@ -3,11 +3,12 @@ import { Guitar, Cat, BookOpen, Bean } from 'lucide-react';
 import Header from './components/Header';
 import PassionCard from './components/PassionCard';
 import AnimatedSubtitle from './components/AnimatedSubtitle';
-
+import CustomCursor from './components/CustomCursor';
 function App() {
   return (
     <div className="min-h-screen bg-zinc-900">
       <Header />
+      <CustomCursor/>
       
       {/* Hero Section */}
       <section className="relative min-h-screen flex items-center justify-center pt-16">

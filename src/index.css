@@ -2,10 +2,76 @@
 @tailwind components;
 @tailwind utilities;
 
+@keyframes glow {
+  0%, 100% {
+    filter: drop-shadow(0 0 8px rgba(52, 211, 153, 0.6));
+  }
+  50% {
+    filter: drop-shadow(0 0 15px rgba(52, 211, 153, 0.8));
+  }
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+  50% {
+    transform: translate(-50%, -50%) rotate(5deg);
+  }
+}
+
 html {
   scroll-behavior: smooth;
 }
 
 body {
   @apply antialiased bg-zinc-900;
+  cursor: none;
+}
+
+.custom-cursor {
+  font-size: 24px;
+  position: fixed;
+  pointer-events: none;
+  z-index: 9999;
+  transform-origin: center;
+  transition: transform 0.1s ease;
+  animation: glow 2s ease-in-out infinite;
+}
+
+.custom-cursor-trail {
+  position: fixed;
+  pointer-events: none;
+  z-index: 9998;
+  font-size: 24px;
+  opacity: 0.3;
+  filter: blur(1px);
+  transition: all 0.15s ease;
+}
+
+.custom-cursor.hover {
+  transform: scale(1.2) rotate(15deg);
+  filter: brightness(1.2);
+  animation: glow 1s ease-in-out infinite;
+}
+
+/* Glowing effects for interactive elements */
+.glow-on-hover {
+  position: relative;
+}
+
+.glow-on-hover::after {
+  content: '';
+  position: absolute;
+  inset: -2px;
+  border-radius: inherit;
+  background: linear-gradient(45deg, #34d399, #059669);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  z-index: -1;
+  filter: blur(8px);
+}
+
+.glow-on-hover:hover::after {
+  opacity: 0.7;
 }
