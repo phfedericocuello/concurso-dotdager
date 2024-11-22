@@ -1,47 +1,40 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState, useEffect } from 'react';
+import './cursor.css'; // Asegúrate de importar tu archivo CSS
 
-export default function CustomCursor() {
-  const [position, setPosition] = useState({ x: 0, y: 0 });
-  const [trail, setTrail] = useState<{ x: number; y: number; timestamp: number }[]>([]);
-  const [isHovering, setIsHovering] = useState(false);
+const CustomCursor = () => {
+  const [cursorPosition, setCursorPosition] = useState({ x: 0, y: 0 });
 
+  // Actualiza la posición del cursor cuando el mouse se mueve
   useEffect(() => {
-    let trailTimeout: NodeJS.Timeout;
-    const maxTrail = 3;
-
-    const updatePosition = (e: MouseEvent) => {
-      setPosition({ x: e.clientX, y: e.clientY });
-      
-      setTrail(prevTrail => {
-        const timestamp = performance.now();
-        const newTrail = [...prevTrail];
-        newTrail.push({ x: e.clientX, y: e.clientY, timestamp });
-        if (newTrail.length > maxTrail) {
-          newTrail.shift();
-        }
-        return newTrail;
+    const handleMouseMove = (e) => {
+      setCursorPosition({
+        x: e.clientX,
+        y: e.clientY,
       });
-
-      clearTimeout(trailTimeout);
-      trailTimeout = setTimeout(() => setTrail([]), 100);
     };
 
-    const updateHoverState = (e: MouseEvent) => {
-      const target = e.target as HTMLElement;
-      setIsHovering(
-        target.tagName === 'BUTTON' ||
-        target.tagName === 'A' ||
-        target.closest('button') !== null ||
-        target.closest('a') !== null
-      );
-    };
+    // Escuchar el movimiento del mouse
+    window.addEventListener('mousemove', handleMouseMove);
 
-    window.addEventListener('mousemove', updatePosition);
-    window.addEventListener('mouseover', updateHoverState);
-
+    // Limpiar el evento al desmontar el componente
     return () => {
-      window.removeEventListener('mousemove', updatePosition);
-      window.removeEventListener('mouseover', updateHoverState);
-      clearTimeout(trailTimeout);
+      window.removeEventListener('mousemove', handleMouseMove);
     };
-  }, [])};
+  }, []);
+
+  return (
+    <>
+      <div
+        className="cursor-brillo"
+        style={{
+          left: `${cursorPosition.x}px`,
+          top: `${cursorPosition.y}px`,
+        }}
+      >
+        🥒 {/* Emoji de pepino */}
+      </div>
+    </>
+  );
+};
+
+export default CustomCursor;

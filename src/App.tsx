@@ -1,16 +1,18 @@
 import React from 'react';
 import { Guitar, Cat, BookOpen, Bean } from 'lucide-react';
+import { FaGithub, FaYoutube, FaDiscord, FaTwitch } from 'react-icons/fa';
 import Header from './components/Header';
 import PassionCard from './components/PassionCard';
 import AnimatedSubtitle from './components/AnimatedSubtitle';
 import CustomCursor from './components/CustomCursor';
+import LluviaDePepinos from './components/LluviaDePepinos';
+
 function App() {
   return (
     <div className="min-h-screen bg-zinc-900">
       <Header />
-      <CustomCursor/>
-      
-      {/* Hero Section */}
+      <CustomCursor />
+      {/* Seccion principal */}
       <section className="relative min-h-screen flex items-center justify-center pt-16">
         <div className="absolute inset-0">
           <div className="absolute inset-0 bg-gradient-to-b from-zinc-900/90 to-zinc-900"></div>
@@ -22,7 +24,7 @@ function App() {
               Dot <span className="text-emerald-400">Dager</span>
             </h1>
             <AnimatedSubtitle 
-              text="Full Stack Developer & Contador serial de chistes malos"
+              text="Full Stack senior & Contador serial de chistes malos"
               className="text-xl text-emerald-400 font-medium mb-6 h-8"
             />
             <p className="text-xl text-zinc-400">
@@ -47,7 +49,7 @@ function App() {
         </div>
       </section>
 
-      {/* Passions Section */}
+      {/* Pasiones */}
       <section id="passions" className="py-20 bg-zinc-800">
         <div className="container mx-auto px-4">
           <h2 className="text-4xl font-bold text-center mb-16 text-white">Mis pasiones</h2>
@@ -80,12 +82,12 @@ function App() {
         </div>
       </section>
 
-      {/* Content Section */}
+      {/* Contenido */}
       <section id="content" className="py-20 bg-zinc-900">
         <div className="container mx-auto px-4">
           <h2 className="text-4xl font-bold text-center mb-16 text-white">Contenido reciente</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {/* Featured Video Card */}
+            {/* Tarjeta 1 */}
             <div className="bg-zinc-800 rounded-xl shadow-lg overflow-hidden border border-zinc-700">
               <img 
                 src="https://images.unsplash.com/photo-1525201548942-d8732f6617a0?auto=format&fit=crop&q=80"
@@ -98,7 +100,7 @@ function App() {
               </div>
             </div>
 
-            {/* Philosophy Discussion Card */}
+            {/* Tarjeta 2 */}
             <div className="bg-zinc-800 rounded-xl shadow-lg overflow-hidden border border-zinc-700">
               <img 
                 src="https://images.unsplash.com/photo-1544716278-ca5e3f4abd8c?auto=format&fit=crop&q=80"
@@ -111,7 +113,7 @@ function App() {
               </div>
             </div>
 
-            {/* Cat Care Card */}
+            {/* Tarjeta 3 */}
             <div className="bg-zinc-800 rounded-xl shadow-lg overflow-hidden border border-zinc-700">
               <img 
                 src="https://images.unsplash.com/photo-1514888286974-6c03e2ca1dba?auto=format&fit=crop&q=80"
@@ -127,22 +129,35 @@ function App() {
         </div>
       </section>
 
-      {/* About Section */}
-      <section id="about" className="py-20 bg-zinc-800">
-        <div className="container mx-auto px-4">
-          <div className="max-w-3xl mx-auto text-center">
-            <h2 className="text-4xl font-bold mb-8 text-white">Sobre Dot Dagger</h2>
-            <p className="text-xl text-zinc-400 leading-relaxed mb-8">
-              When I'm not crafting beautiful code or debugging with a smile, I'm probably telling dad jokes to my cats 
-              while strumming power chords. I believe in the philosophy that life is better with a soundtrack and a 
-              side of pickles. Warning: My code may contain traces of humor.
-            </p>
-            <button className="bg-emerald-500 hover:bg-emerald-600 text-zinc-900 font-bold py-3 px-8 rounded-full transition-colors">
-              Subscribite
-            </button>
+      {/* Seccion about */}
+      <section id="about" className="py-20 bg-zinc-800 relative">
+      <LluviaDePepinos />
+      <div className="container mx-auto px-4 relative z-10">
+        <div className="max-w-3xl mx-auto text-center text-container">
+          <h2 className="text-4xl font-bold mb-8 text-white">Sobre Dot Dagger</h2>
+          <p className="text-xl text-zinc-400 leading-relaxed mb-8">
+            When I'm not crafting beautiful code or debugging with a smile, I'm probably telling dad jokes to my cats
+            while strumming power chords. I believe in the philosophy that life is better with a soundtrack and a side of pickles.
+            Warning: My code may contain traces of humor.
+          </p>
+          {/* Aquí colocamos los iconos de las redes sociales */}
+          <div className="flex justify-center space-x-6 mt-8">
+            <a href="https://github.com/MarianoVilla" target="_blank" rel="noopener noreferrer" className="text-white hover:text-emerald-500">
+              <FaGithub size={32} />
+            </a>
+            <a href="https://www.youtube.com/@DotDager" target="_blank" rel="noopener noreferrer" className="text-white hover:text-emerald-500">
+              <FaYoutube size={32} />
+            </a>
+            <a href="https://discord.com/invite/4NFk6TamAB" target="_blank" rel="noopener noreferrer" className="text-white hover:text-emerald-500">
+              <FaDiscord size={32} />
+            </a>
+            <a href="https://www.twitch.tv/dagerxiv" target="_blank" rel="noopener noreferrer" className="text-white hover:text-emerald-500">
+              <FaTwitch size={32} />
+            </a>
           </div>
         </div>
-      </section>
+      </div>
+    </section>
 
       {/* Footer */}
       <footer className="bg-zinc-900 text-zinc-400 py-8 border-t border-zinc-800">
