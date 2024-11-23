@@ -9,7 +9,6 @@ export default function Header() {
         <div className="flex gap-6">
           <a href="#passions" className="hover:text-emerald-400 transition-colors">Pasiones</a>
           <a href="#content" className="hover:text-emerald-400 transition-colors">Contenido</a>
-          <a href="#lumber" className="hover:text-emerald-400 transition-colors">Lumber</a>
           <a href="#about" className="hover:text-emerald-400 transition-colors">Sobre mi</a>
         </div>
       </div>
