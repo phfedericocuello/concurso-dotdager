@@ -84,7 +84,7 @@ function App() {
 
       <section id="content" className="py-20 bg-zinc-900">
         <div className="container mx-auto px-4">
-          <h2 className="text-4xl font-bold text-center mb-16 text-white">Latest Content</h2>
+          <h2 className="text-4xl font-bold text-center mb-16 text-white">Contenido reciente</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {/* Featured Video Card */}
             <div className="bg-zinc-800 rounded-xl shadow-lg overflow-hidden border border-zinc-700 glow-on-hover">
@@ -133,12 +133,23 @@ function App() {
               </div>
               <div className="p-6">
                 <h3 className="text-xl font-bold mb-2 text-white">El mercado IT está controlado por IA</h3>
-                <p className="text-zinc-400">Teoria falopa sobre IA y como todo lo maneja un bot</p>
+                <p className="text-zinc-400">El mercado esta controlado por bots intentando destacar frente a otros bots por lo que... Feliz navidad.</p>
               </div>
             </div>
           </div>
         </div>
       </section>
+
+      <div id="lumber" className="game-container" style={{ position: 'relative', width: '100%', height: '250px' }}>
+        <iframe
+          src="https://tbot.xyz/lumber/"  // Reemplaza con la URL del juego
+          width="100%"  // Ajusta al tamaño del contenedor
+          height="100%" // Ajusta al tamaño del contenedor
+         title="Lumberjack Game"
+          style={{ position: 'absolute', top: 0, left: 0 }}
+        ></iframe>
+      </div>
+
 
       {/* Seccion about */}
       <section id="about" className="py-20 bg-zinc-800 relative">
@@ -167,7 +178,6 @@ function App() {
         </div>
       </div>
     </section>
-
       {/* Footer */}
       <footer className="bg-zinc-900 text-zinc-400 py-8 border-t border-zinc-800">
         <div className="container mx-auto px-4 text-center">

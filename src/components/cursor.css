@@ -16,6 +16,7 @@
   a {
     cursor: none; /* Elimina el cursor de mano (pointer) en los enlaces */
   }
+  
   button:hover{
     cursor: none;
   }
