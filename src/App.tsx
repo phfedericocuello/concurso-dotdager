@@ -9,7 +9,7 @@ import LluviaDePepinos from './components/LluviaDePepinos';
 
 function App() {
   return (
-    <div className="min-h-screen bg-zinc-900">
+    <div id="Inicio" className="min-h-screen bg-zinc-900">
       <Header />
       <CustomCursor />
       {/* Seccion principal */}
@@ -56,25 +56,25 @@ function App() {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             <PassionCard
               title="Guitarra"
-              description="Making strings vibrate and eardrums question their life choices."
+              description="Toco la guitarra como depuro código, a veces bien, a veces... un poco desafinado."
               Icon={Guitar}
               color="bg-emerald-400"
             />
             <PassionCard
               title="Gatos"
-              description="Professional cat herder and expert in feline negotiations."
+              description="Mi código es como un gato: elegante, independiente y siempre me ignora cuando más lo necesito."
               Icon={Cat}
               color="bg-pink-400"
             />
             <PassionCard
               title="Filosofia"
-              description="Asking 'why' until everyone leaves the room."
+              description="Me gusta preguntar 'por qué' hasta que todos se vayan de la habitación."
               Icon={BookOpen}
               color="bg-purple-400"
             />
             <PassionCard
               title="Pepinos"
-              description="Turning cucumbers into time capsules of flavor."
+              description="Cuando empieza la lluvia de pepinos, no sabes si refrescarte o preparar el terreno..."
               Icon={Bean}
               color="bg-yellow-400"
             />
@@ -82,47 +82,58 @@ function App() {
         </div>
       </section>
 
-      {/* Contenido */}
       <section id="content" className="py-20 bg-zinc-900">
         <div className="container mx-auto px-4">
-          <h2 className="text-4xl font-bold text-center mb-16 text-white">Contenido reciente</h2>
+          <h2 className="text-4xl font-bold text-center mb-16 text-white">Latest Content</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {/* Tarjeta 1 */}
-            <div className="bg-zinc-800 rounded-xl shadow-lg overflow-hidden border border-zinc-700">
-              <img 
-                src="https://images.unsplash.com/photo-1525201548942-d8732f6617a0?auto=format&fit=crop&q=80"
-                alt="Guitar Tutorial"
-                className="w-full h-48 object-cover"
-              />
+            {/* Featured Video Card */}
+            <div className="bg-zinc-800 rounded-xl shadow-lg overflow-hidden border border-zinc-700 glow-on-hover">
+              <div className="aspect-video">
+              <iframe
+                className='w-full h-full'
+                src="https://www.youtube.com/embed/YQfRVo5UwOM?si=JID2cEAv4OHLbRys" 
+                title="YouTube video player"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowFullScreen
+                ></iframe>
+              </div>
               <div className="p-6">
-                <h3 className="text-xl font-bold mb-2 text-white">Ultimate Guitar Tutorial</h3>
-                <p className="text-zinc-400">How to make your neighbors regret their housing choices.</p>
+                <h3 className="text-xl font-bold mb-2 text-white">Como estudiar (pero bien).</h3>
+                <p className="text-zinc-400">Recomendaciones falopa mientras procrastina en reddit.</p>
               </div>
             </div>
 
-            {/* Tarjeta 2 */}
-            <div className="bg-zinc-800 rounded-xl shadow-lg overflow-hidden border border-zinc-700">
-              <img 
-                src="https://images.unsplash.com/photo-1544716278-ca5e3f4abd8c?auto=format&fit=crop&q=80"
-                alt="Philosophy Discussion"
-                className="w-full h-48 object-cover"
-              />
+            {/* Featured Video Card */}
+            <div className="bg-zinc-800 rounded-xl shadow-lg overflow-hidden border border-zinc-700 glow-on-hover">
+              <div className="aspect-video">
+              <iframe
+                className='w-full h-full'
+                src="https://www.youtube.com/embed/FMfLfYus6Yc?si=qCXF2vKYQATMhDCr" 
+                title="YouTube video player"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowFullScreen
+                ></iframe>
+              </div>
               <div className="p-6">
-                <h3 className="text-xl font-bold mb-2 text-white">Philosophy & Music</h3>
-                <p className="text-zinc-400">If a tree falls in the forest, does it make a sick guitar riff?</p>
+                <h3 className="text-xl font-bold mb-2 text-white">No seas tan programador.</h3>
+                <p className="text-zinc-400">Ser "demasiado programador" a veces te vuelve peor programador.</p>
               </div>
             </div>
 
-            {/* Tarjeta 3 */}
-            <div className="bg-zinc-800 rounded-xl shadow-lg overflow-hidden border border-zinc-700">
-              <img 
-                src="https://images.unsplash.com/photo-1514888286974-6c03e2ca1dba?auto=format&fit=crop&q=80"
-                alt="Cat Care Guide"
-                className="w-full h-48 object-cover"
-              />
+            {/* Featured Video Card */}
+            <div className="bg-zinc-800 rounded-xl shadow-lg overflow-hidden border border-zinc-700 glow-on-hover">
+              <div className="aspect-video">
+                <iframe
+                className='w-full h-full'
+                src="https://www.youtube.com/embed/ixwR9EyvRjs?si=nPqDHif5PBLiTkrq" 
+                title="YouTube video player"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowFullScreen
+                ></iframe>
+              </div>
               <div className="p-6">
-                <h3 className="text-xl font-bold mb-2 text-white">Cat Care 101</h3>
-                <p className="text-zinc-400">How to serve your feline overlords with dignity.</p>
+                <h3 className="text-xl font-bold mb-2 text-white">El mercado IT está controlado por IA</h3>
+                <p className="text-zinc-400">Teoria falopa sobre IA y como todo lo maneja un bot</p>
               </div>
             </div>
           </div>
@@ -136,9 +147,7 @@ function App() {
         <div className="max-w-3xl mx-auto text-center text-container">
           <h2 className="text-4xl font-bold mb-8 text-white">Sobre Dot Dagger</h2>
           <p className="text-xl text-zinc-400 leading-relaxed mb-8">
-            When I'm not crafting beautiful code or debugging with a smile, I'm probably telling dad jokes to my cats
-            while strumming power chords. I believe in the philosophy that life is better with a soundtrack and a side of pickles.
-            Warning: My code may contain traces of humor.
+            Mi nombre es Mariano Villa y soy desarrollador Full Stack, soy programador por pasión y guitarra por hobby. Mis gatos son mis compañeros de depuración (aunque a veces prefieren dormir sobre el teclado). Me encanta la filosofía, especialmente cuando me pregunto "¿por qué funciona este código?". Y, por supuesto, creo firmemente que la vida es mejor con pepinos.
           </p>
           {/* Aquí colocamos los iconos de las redes sociales */}
           <div className="flex justify-center space-x-6 mt-8">
